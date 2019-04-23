@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Contact Us</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" href="css/index.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+	</head>
+	<body>
+
+		<?php include('header.inc');?>
+
+
+		<div class="content">
+			<h2 id="contactInfo"><i style="color:black">Contact Information</i></h2>
+
+			<p id="socialLinks">
+			 <b>Address:</b> <a href="https://goo.gl/maps/VtZ17Bmg7fr" target="_blank">42 Petaluma Blvd, Petaluma, CA 94952</a> | 
+			 <b>Phone:</b><a href="callto:7074225555"> 707-422-5555</a> | 
+			 <b>Email:</b> <a href="mailto: info@kalabrand.com">info@kalabrand.com</a> 
+
+			 <!--Facebook Logo--> 
+			 <a href="http://www.facebook.com/KalaBrandMusic/" target="_blank">
+			 	<img src="css/images/facebook.png"/>
+			 </a>  
+			 <!--Instagram Logo-->
+			 <a href="https://www.instagram.com/kalabrandmusic/" target="_blank">
+			 	<img src="css/images/instagram.png"/>
+			 </a> 
+			 <!--Twitter Logo-->
+			 <a href="http://twitter.com/kalabrandmusic" target="_blank">
+			 	<img src="css/images/twitter.png" />
+			 </a>
+			</p>
+			<br>
+
+			<div align="center">
+				<img id="guitarGirl" src="css/images/extra1.jpg"/>
+			</div>
+		</div>
+
+		<br>
+		<footer align="center"><span>&copy; Copyright 2019, Kala Music Co.<span></footer>
+	</body>
+
+	<!-- Navigation Events-->
+		<script type="text/javascript">
+			var closeButton= document.getElementById("close");
+			var openButton= document.getElementById("open");
+
+			window.addEventListener("resize", buttonDisplays);
+			function openMenu(){
+				document.getElementById("menu").style.width= "250px";
+				document.body.style.marginLeft="250px";
+				closeButton.style.display="block";
+				openButton.style.display="none";
+			}
+
+			function closeMenu(){
+				document.getElementById("menu").style.width="0";
+				document.body.style.marginLeft="0";
+				closeButton.style.display="none";
+				openButton.style.display="block";
+				
+			}
+
+			function buttonDisplays(){
+				//Mobile Screen size re-display
+				if(window.innerWidth<=500)
+					openButton.style.display="block";
+				else
+					openButton.style.display="none";
+			}
+
+		</script>
+
+</html>

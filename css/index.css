@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed|Maven+Pro');
+
+/*All Pages*/
+#shopping-cart{
+	position: absolute;
+	top:5px;
+	left:5px;
+	font-size:20px;
+	color: black;
+
+}
+
+html{
+	height: 100%;
+	margin:0;
+}
+
+body{
+	background-color:ghostwhite;
+}
+
+.nav{
+	text-align:right;
+}
+
+.nav a  {
+	text-decoration: none;
+	font-size:20px;
+	color: black;
+	font-family: 'Roboto', sans-serif;
+}
+
+.nav a:hover{
+	transition: all ease-in .3s;
+	color: #CC3300;
+	
+}
+
+#open{
+	display: none;
+}
+
+.navMobile{
+	display: none;
+}
+
+.headerLogo{
+	width:300px;
+
+}
+
+footer{
+	position: absolute;
+	font-size:15px;
+	border-top-style: solid;
+	height: 35px;
+	left:0;
+	right:0;
+	width:100%;
+	font-family: 'Roboto', sans-serif;
+	border-width:.5px;
+	
+}
+span{
+	position: relative;
+	top:5px;
+}
+
+
+/* Home Page */
+
+p, h2,div{
+	font-family: 'Roboto', sans-serif;
+}
+#bio p{
+	border-style:solid;
+	border-width: 1px;
+	border-radius:15px;
+	padding:10px;
+
+}
+
+h2{
+	font-size:40px;
+}
+
+	/*Inner paragraph links*/
+p a{
+	text-decoration: none;
+	color: #CC3f00;
+}
+p a:hover{
+	text-decoration:underline;
+}
+
+#bio{
+	text-align:center;
+}
+
+#guitarPic{
+	width: 500px;
+}
+
+
+
+/* Contact Page */
+
+#contactInfo{
+	font-family: 'Roboto', sans-serif;
+	font-size:40px;
+	text-align:center;
+}
+
+
+
+#socialLinks{
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+
+}
+
+#socialLinks a img{
+	margin:0 3px;
+	width:20px;
+}
+#socialLinks a img:hover{
+	transition:all ease-in .5s;
+	transform:scale(1.5);
+
+}
+
+#guitarGirl{
+	width:300px;
+}
+
+
+/* Products Page */
+
+#productTitle{
+	font-size:35px;
+}
+
+div i{
+	color: #CC3300;
+}
+
+
+
+.products img{
+	position: relative;
+	width:20%;
+	border-radius: 25px;
+	left:40%;
+	right:40%;
+
+}
+
+.products img:hover{
+	transition: ease-in .5s;
+	transform: scale(1.1);
+}
+
+
+.products .item{
+	position: relative;
+	border-style: solid;
+	border-width:1px;
+	border-radius: 20px;
+	padding:10px;
+	width:40%;
+	left:30%;
+	right: 30%;
+
+}
+
+.buyBtn{
+	float: right;
+	border:none;
+	border-radius: 15px;
+	background-color:#CC3300;
+	text-align:center;
+	color:ghostwhite;
+	width:90px;
+	height: 45px;
+	font-family: 'Bree Serif', serif;
+
+
+}
+
+.buyBtn:hover{
+	transition: all ease-in .2s;
+	background-color:grey;
+}
+
+
+
+/*Order Form*/
+
+.input{
+	width: fit-content;
+	
+}
+.input input{
+	border-radius: 2px;
+	border-color:grey;
+	border-width: .4px;
+	height:30px;
+	font-size:15px;
+}
+
+form{
+	margin-left:20px;
+}
+form p{
+	font-size:20px;
+}
+
+input[type=submit] {
+	background-color:#2a9dcc;
+	border-style:solid;
+	border-width:.5px;
+	border-radius: 7px;
+	width:100px;
+	height: 50px;
+	color:ghostwhite;
+	font-size: 15px;
+}
+
+input[type=submit]:hover{
+	transition: all ease-in .2s;
+	background-color: #32CD32;
+
+}
+
+#error-cc{
+	display: none;
+	color:red;
+}
+
+#error-zip{
+	display: none;
+	color:red;
+}
+
+#error-expY{
+	display: none;
+	color:red;
+}
+
+
+/* ADMIN PAGE */
+
+#logoff a{
+	text-decoration: none;
+	color: ghostwhite;
+	font-family: 'Roboto', sans-serif;
+	font-size: 15px;
+
+}
+
+#logoff{
+	position: fixed;
+	bottom: 5px;
+	right:5px;
+	background-color: black;
+	width:100px;
+	height:50px;
+	border-style: none;
+	border-radius:5px;
+}
+
+#logoff:hover{
+	transition: ease-in all .3s;
+	background-color: #dd0000;
+	
+}
+
+#title-newproduct{
+	font-family: 'Barlow Condensed', sans-serif;
+	font-size:50px;
+
+}
+
+#form-newproduct{
+	position: relative;
+	font-size:30px;
+}
+
+#createProductBtn{
+	position:relative;
+	background-color:#ff6e40;
+	border-style:solid;
+	border-width:.5px;
+	border-radius: 7px;
+	width:100px;
+	height: 50px;
+	color:ghostwhite;
+	font-size: 20px;
+	font-family: 'Barlow Condensed', sans-serif;
+	top:15px;
+	left:15%;
+
+}
+
+.deleteBtn{
+	z-index:100;
+	position:relative;
+	float: right;
+	left:-29%;
+	margin-top:140px;
+	border:none;
+	border-radius: 10px;
+	background-color:red;
+	text-align:center;
+	color:ghostwhite;
+	width:90px;
+	height: 45px;
+	font-family: 'Bree Serif', serif;
+	top:-50px;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MOBILE*/
+@media(max-width: 500px)  {
+
+	/* Navigation*/
+	.nav{
+		display: none;
+	}
+
+	.navMobile{
+	position: fixed;
+	display: block;
+	margin-top:-60px;
+	height: 100%;
+	width:0;
+	z-index: 1;
+	top:0;
+	left:0;
+	background-color:black;
+	opacity: 1;
+	overflow-x: hidden;
+	padding-top:60px;
+	transition: 0.7s;
+	font-family: Alegreya Sans;
+	}
+
+	.navMobile a{
+
+		display: block;
+		padding: 20px 30px;
+		font-size:30px;
+		text-decoration: none;
+		color: ghostwhite;
+		
+	}
+
+	#close{
+		position: relative;
+		right:-170px;
+	}
+
+	#open{
+		display:block;
+		position: absolute;
+		left:8px;
+		
+		color: black;
+		font-size:28px;
+	}
+	.shiftLeft{
+		margin:0 15px;
+	}
+
+	.mobileLinks a{
+		margin-left:-25px;
+	}
+
+
+
+	/*Home Page*/
+	#guitarPic{
+	width: 300px;
+	}
+
+
+
+	/*Products Page*/
+	.products .item{
+	position: relative;
+	border-style: solid;
+	border-width:1px;
+	border-radius: 20px;
+	padding:10px;
+	width:75%;
+	left:12.5%;
+	right:12.5%;
+
+	}
+
+	.products img{
+	position: relative;
+	width:30%;
+	border-radius: 25px;
+	left:35%;
+	right:35%;
+	}
+
+	.details div{
+		position: relative;
+		font-size: 13.5px;
+		left:8px;
+
+	}
+
+	.buyBtn{
+		float: right;
+		border:none;
+		border-radius: 15px;
+		background-color:#CC3300;
+		color:ghostwhite;
+		width:60px;
+		height: 30px;
+		font-family: 'Bree Serif', serif;
+
+
+	}
+
+	.buyBtn:hover{
+		transition: all ease-in .2s;
+		background-color:grey;
+	}
+}

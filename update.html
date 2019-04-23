@@ -1,0 +1,32 @@
+
+<?php
+	
+	require_once('db.inc');
+
+	
+
+	$item_id= $_POST['product'];
+	$itemName= $_POST['item-'.$item_id.''];
+	$price= $_POST['price-'.$item_id.''];
+	
+	$updateItem="UPDATE products SET name='".$itemName."', price=".$price." WHERE id=".$item_id."";
+	
+
+	if($db->query($updateItem)===TRUE){
+		print "<h1>Successfully Uploaded!</h1>";
+
+		//ERROR
+		if(move_uploaded_file($_FILES['newfile']['tmp_name'], 'css/images/product'.$item_id.'.jpg')===TRUE)
+			print "Successful image change";
+		else
+			print "Image change Unsuccessful";
+
+	}	
+	else
+		print "<h1> Updating Error</h1>". $db->error;
+	
+
+	header('Refresh: 3;URL=http://student.kainaw.com/~kailynw/admin.html');
+	
+
+?>

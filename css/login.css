@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik|Roboto');
+html,body{
+	background: #44A08D;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, grey,white);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, grey, white); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+
+input[type=text]{
+	position: relative;
+	top:50%;
+	font-size: 20px;
+	border:none;
+	outline: none;
+	background-color: transparent;
+	border-bottom: 3px solid black;
+    font-family: 'Roboto', sans-serif;
+
+
+}
+
+#inputs{
+	position: relative;
+	margin-top:8%;
+	left:35.5%;
+	background-color:white;
+	padding:30px;
+	width:25%;
+	box-shadow: black 0px 5px 5px 0px;
+
+}
+
+img{
+	position: relative;
+	width:400px;
+}
+
+form{
+
+	position: relative;
+	
+}
+
+#submit{
+	width: 200px;
+	height:50px;
+	font-size: 30px;
+	color: ghostwhite;
+	border:none;
+	box-shadow: black 0px 10px 25px 0px;
+	background-color: #CC3f00;
+	border-radius:10px;
+	font-family: 'Rubik', sans-serif;
+}
+
+#submit:hover{
+	transition: ease-in .3s;
+	transform: scale(1.1);
+	background-color: black;
+}
+
+input:active{
+	transition: ease-in .5s;
+	font-size:20px;
+}

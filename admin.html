@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>  Admin </title>
+	<link type="text/css" rel="stylesheet" href="css/index.css" />
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+</head>
+	<body>
+		<div><?php
+		require_once('admin.inc');
+		print 'COOKIE:'; print_r($_COOKIE);
+		print 'POST:'; print_r($_POST);
+		print 'SESSION:'; print_r($_SESSION);
+		?>
+    	</div>
+    	
+        <div class="products">
+
+                    <?php
+					require_once('admin_product_listing.php');
+                    ?>
+       	</div>
+    
+    	<h1	 align="center" id="title-newproduct">Add a new product</h1>
+        <hr>
+		<form id="form-newproduct" enctype='multipart/form-data' action='admin_new_product.html' method='post'>
+ 			Name: <input type='text' name='name'><br>
+ 			Price: <input type='number' name='price' step='0.01'><br>
+			Description: <textarea name='description'></textarea><br>
+ 			<input type='hidden' name='MAX_FILE_SIZE' value='2000000'>
+ 			Image: <input type='file' name='image'><br>
+ 			<button id="createProductBtn" type='submit'>Create Product</button>
+		</form>
+   		
+    	<button id="logoff"> 
+        <a href="login.html?logoff=1"> <b>LOG OFF</b> </a>
+    	</button>
+    	
+	</body>
+
+	
+    
+
+</html>

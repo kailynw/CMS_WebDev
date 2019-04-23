@@ -1,0 +1,9 @@
+<?php
+	require_once('db.inc');
+	require_once('redirect.inc');
+	$id= $_GET['id'];
+	$stmt= $db-> query("delete from products where id=".$id."");
+	$stmt-> execute;
+	unlink("product".$id.".jpg");
+	redirect('admin.html');
+?>

@@ -1,0 +1,121 @@
+<?php require_once('db.inc');
+	  require_once('cart.php');
+	  require_once('redirect.inc');
+?>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Order</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" href="css/index.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Roboto"  rel="stylesheet">
+		<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+		<script language="javascript" src='js/scripts.js'></script>
+	</head>
+	<body>
+
+		
+
+		 <?php include('header.inc');?>
+
+		<form method="get" action="thanks.html" onsubmit= ' return validate()'>
+        	<p> Contact Information</p>
+            <input type='hidden' name='product' value='<?php echo $_GET['product'];?>' >
+            
+            <div class="order-summary" style="position: relative; background-color: black; width:350px; height: 350px; border-radius:10px; float: right">
+				<div align="center" style="color:white" > Summary</div>
+            	
+         	<!--Cart Summary -->
+            <table cellspacing="40">
+                <tr style="color: white">
+                <td><u>Quantity</u></td> <td><u>Item</u></td> <td><u>Price</u></td>
+				</tr>
+				<?php include('cart_processing.php'); ?>
+          		
+            </table>
+       	 	</div>
+			<div class="wrapper-c">
+				 <div>
+					 <div class='input' colspan='5' ><input id="name" name='name' placeholder=" Name" size=35 required></div>
+				 </div>
+				 <br>
+				 <div>
+				 	<div class="input"> <input name='email' type='email' placeholder=" Email" size='35'required></div>
+				 </div>
+			</div>
+
+			<p>Shipping Info</p>
+			<div class="wrapper-s">
+				<div class='input'><input name='street' size='35' placeholder=" Street"required></div>
+				<br>
+				 <div>
+				 	<div>
+				 		<div class='input'><input name='city' placeholder=" City" size=35 required></div>
+					</div>
+					<br>
+					<div>
+						<span class='input'><input name='state' placeholder=" State" size="10" required></span>
+						<span class='input'><input id='zip' name='zip' placeholder=" ZIP" size="10"required></span>
+						<span id="error-zip"> ** Invalid ZIP</span>
+					</div>
+				 </div>
+			</div>
+
+			<p> Billing Information</p>
+			<div class="wrapper-b">
+
+				<div class='input'>
+					<input id='creditCard' name='creditCard' size='35' placeholder=" Credit Card"required>
+				 	<span id="error-cc"> ** Invalid Credit Card</span>
+				</div>
+				
+				<br>
+
+				<div>
+					<span class='input'><input name='expMonth' size='15' placeholder=" Exp. Month"required></span>
+
+					<span class='input'><input id='expYear' name='expYear' size='14' placeholder=" Exp. Year"required></span>
+
+					<span id="error-expY"> ** Invalid Year</span>
+				</div>
+			</div>
+			<br>
+			<input type="submit" value="Place Order">
+		</form>
+	</body>
+
+
+	<!-- Navigation Events-->
+		<script type="text/javascript">
+			var closeButton= document.getElementById("close");
+			var openButton= document.getElementById("open");
+
+			window.addEventListener("resize", buttonDisplays);
+			function openMenu(){
+				document.getElementById("menu").style.width= "250px";
+				document.body.style.marginLeft="250px";
+				closeButton.style.display="block";
+				openButton.style.display="none";
+			}
+
+			function closeMenu(){
+				document.getElementById("menu").style.width="0";
+				document.body.style.marginLeft="0";
+				closeButton.style.display="none";
+				openButton.style.display="block";
+				
+			}
+
+			function buttonDisplays(){
+				//Mobile Screen size re-display
+				if(window.innerWidth<=500)
+					openButton.style.display="block";
+				else
+					openButton.style.display="none";
+			}
+			
+
+		</script>
+</html>

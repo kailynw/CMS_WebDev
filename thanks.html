@@ -1,0 +1,37 @@
+<?php
+require_once('db.inc');
+require_once('cart.php');
+
+if(empty(trim($_GET['name']))) {
+	include('redirect.inc');
+	
+	redirect('order.html?product='.$_GET['product'].'&error='.urlencode('Name is a required field.'));
+}
+ ?>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Thank You!</title>
+	</head>
+	
+	<div class="order-summary" style="position: relative; background-color: black; width:350px; height: 350px; border-radius:10px; float: right">
+			<div align="center" style="color:white" > Summary</div>
+            	
+            <table cellspacing="40">
+                <tr style="color: white">
+                <td><u>Quantity</u></td> <td><u>Item</u></td> <td><u>Price</u></td>
+            </tr>
+				<?php include('cart_processing.php'); ?>
+            </table>
+	</div>
+
+	<body>
+		<h1>Thank you for your order!</h1>
+    	<h2> Order processed for:</h2>
+    	<p> Name: <?php print $_GET['name'];?> </p>
+    	<p> Email: <?php print $_GET['email'];?> </p>
+    	<p> Address: <?php print $_GET['street'].' , '.$_GET['city'].' '.$_GET['state'].' '.$_GET['zip']   ;?> </p>
+    	<p>Product # <?php echo $_GET['product']; ?></p>
+	</body>
+</html>

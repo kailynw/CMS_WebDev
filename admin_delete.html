@@ -1,0 +1,23 @@
+<?php
+	require_once('redirect.inc');
+	require_once('db.inc');
+
+	$id= intval($_GET['id']);
+	if($id<=0)
+		redirect('admin.html');
+
+	$result= $db->query("select name from products where id=".$id."");
+	if($row=$result->fetch_object()){
+		print "Are you sure you want to delete <b>".$row->name."</b>?<br>";
+		print "<a href='admin_delete_now.html?id=$id'>Yes</a> ";
+		print " <a href='admin.html'>No</a>";
+
+	}
+	else{
+
+	}
+
+
+
+
+?>

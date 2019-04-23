@@ -1,0 +1,34 @@
+<?php
+	require_once('redirect.inc');
+	
+
+	if(empty($_POST['name']) || empty($_POST['price']) || empty($_POST['description'])|| empty($_FILES['image']['size'])){			   	
+		redirect("admin.html");
+	}
+
+	else{
+		require_once('db.inc');	
+		$stmt = $db->prepare('insert into products (name, price, description) values (?, ?, ?)');
+		$stmt->bind_param('sds', $_POST['name'], $_POST['price'], $_POST['description']);
+		$stmt->execute();
+		print "<h1> Item Created Successfully</h1>";
+		
+		
+		//Image Upload
+		$id= $db->insert_id;
+		if(move_uploaded_file($_FILES['image']['tmp_name'], "css/images/product".$id.".jpg")===TRUE){
+			print "Image Uploaded Successfully!";
+		}
+		else{
+			print "Unsuccessful Image Upload";
+		}
+	}
+
+	
+	
+
+	header('Refresh: 3;URL=http://student.kainaw.com/~kailynw/admin.html');
+
+?>
+
+	

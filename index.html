@@ -1,0 +1,93 @@
+<!-- Developer: Kailyn Williams
+	 Description: Kala Brand Music Co. Website containing the company product list and contact info.
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Kala Brand Music Co.</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" href="css/index.css" type="text/css" />
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+		
+	</head>
+	<body>
+
+ 		<?php include('header.inc');?>
+
+		<div class="content">
+			<div id="bio">
+				<h2> <i style="color:black">About Us</i></h2>
+				<p>
+					We are Kala Brand Music Co. and we are from Petaluma, CA. Our hometown is nestled in the Sonoma wine country and a harbor to an eclectic mix of artists, farmers, breweries and tech companies. We are a community deeply rooted in creativity and culture, spread across the many platforms and mediums of art, food, dairy and music.
+					Our character stems from our hometown drawing influence from Petaluma’s turn of the century downtown, its Gold Rush history and the modern meets historical vibe. We know it isn’t Hawaii, the birthplace of the ukulele, but it’s the birthplace of our ukulele, the handmade <a href="products.html">Kala Elite Koa ukulele</a>.
+					We are proud to introduce the Kala Elite Series to ukulele players across the United States and beyond. Our Elite models mark a new standard, much the same as the original U-Bass did in 2007. In collaboration with Owen Holt, we turned the bass world on its ear with our revolutionary short scale bass. In 2016, we are excited to witness the Elite Series impact within the ukulele community.
+					In the past year, we opened a location in Ashland, VA, giving us a presence in Hawaii, California and Virginia. As the ukulele’s popularity continues to surge across the globe, these three locations will help us serve our customers and meet the demand for quality instruments at an affordable price.
+					To all the old, new and future ukesters out there, thanks for strumming, singing and playing a Kala! <a href="contact.html">Contact Us</a> if you have any questions.
+				</p>
+			</div>
+			<br>
+
+			<div align="center">
+				<img id="guitarPic" src="css/images/extra2.jpg"/>
+			</div>
+		</div>
+
+		<br>
+		<footer align="center"><span>&copy; Copyright 2019, Kala Music Co.<span></footer>
+	</body>
+
+
+	<!-- Navigation Events-->
+		<script type="text/javascript">
+			var closeButton= document.getElementById("close");
+			var openButton= document.getElementById("open");
+
+			window.addEventListener("resize", buttonDisplays);
+			function openMenu(){
+				document.getElementById("menu").style.width= "250px";
+				document.body.style.marginLeft="250px";
+				closeButton.style.display="block";
+				openButton.style.display="none";
+			}
+
+			function closeMenu(){
+				document.getElementById("menu").style.width="0";
+				document.body.style.marginLeft="0";
+				closeButton.style.display="none";
+				openButton.style.display="block";
+				
+			}
+
+			function buttonDisplays(){
+				//Mobile Screen size re-display
+				if(window.innerWidth<=500)
+					openButton.style.display="block";
+				else
+					openButton.style.display="none";
+			}
+			
+
+		</script>
+
+
+
+<!--
+Web Design:
+Colors: Black on white - bold.
+3 Favorite Web Designs:
+	http://abcstores.com - Menu at the top. Products at the bottom. That is what a website should be.
+	http://maunaloa.com - Imagine this with a white background and bold black logo.
+	http://mountainapplecompany.com - I like the music theme in the top menu. Again, producs are easy to see, but it is cluttered.
+
+	Facebook: http://www.facebook.com/KalaBrandMusic/
+
+	Twitter: http://twitter.com/kalabrandmusic
+
+	Instagram: https://www.instagram.com/kalabrandmusic/
+
+
+-->
+</html>
